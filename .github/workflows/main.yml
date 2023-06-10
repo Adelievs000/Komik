@@ -7,7 +7,7 @@ on:
   
 jobs:
   Komik-Scrape:
-    runs-on: macos-latest
+    runs-on: windows-latest
     env :
       ATLAS_URL: ${{ secrets.ATLAS_URL }}
       ATLAS_COLLECTION: ${{ secrets.ATLAS_COLLECTION }}
@@ -21,5 +21,5 @@ jobs:
           install.packages("tidyverse", dependencies = TRUE)
           install.packages("mongolite")
         shell: Rscript {0}
-      - name: Komik_scrape.R
-        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+      - name: Scrape Data Komik to MongoDB Atlas
+        run: Komik_scrape.R
