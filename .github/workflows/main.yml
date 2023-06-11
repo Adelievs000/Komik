@@ -22,4 +22,4 @@ jobs:
           install.packages("mongolite")
         shell: Rscript {0}
       - name: Scrape Data Komik to MongoDB Atlas
-        run: Komik_scrape.R
+        run: Rscript Komik_scrape.R
