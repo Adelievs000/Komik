@@ -8,7 +8,6 @@ url<-"https://1stkissmanga.me/manga-genre/drama/?m_orderby=trending"
 manga<-read_html(url)
 link<-manga %>% html_nodes(".page-item-detail.manga") %>% html_node("a")
 link<-link[seq(2,length(link),2)] %>% html_attr("href")
-link
 tabel<-data.frame(Judul=0,Rating=0,Genre=0,Chapter.Terbaru=0,Summary=0)
 for (i in 1:length(link)){
   url1<-read_html(link[i])
