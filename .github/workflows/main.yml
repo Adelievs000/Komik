@@ -2,7 +2,7 @@ name: Scrapping
 
 on:
   schedule:
-    - cron: '*/10 * * * *' #At 07:00 on every day-of-month
+    - cron: '0 0 * *'
   workflow_dispatch:
   
 jobs:
